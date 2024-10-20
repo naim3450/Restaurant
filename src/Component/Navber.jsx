@@ -2,7 +2,7 @@ import React from 'react'
 import Container from './Container'
 import logo from "../assets/logo.png"
 import logo3 from "../assets/logo3.png"
-import logo4 from "../assets/logo4.jpg"
+import logo6 from "../assets/logo6.png"
 import List from './List'
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
@@ -35,9 +35,9 @@ const Navber = () => {
     ]
 
     return (
-        <div className='py-2'>
+        <div className='py-4'>
             <Container className={"flex items-center justify-between"}>
-                <img src={logo4} alt="" className='w-[100px]' />
+                <img src={logo6} alt="" className='w-[100px] h-[80px]' />
 
                 <div className="flex items-center">
 

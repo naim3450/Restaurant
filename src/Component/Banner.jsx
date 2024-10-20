@@ -16,7 +16,7 @@ const Banner = () => {
                     <p className='text-[20px] text-prh2 w-[530px] text-center font-montserrat font-medium'>Discover delectable cuisine and unforgettable moments in our welcoming, culinary haven.</p>
 
                     <div className="flex gap-5">
-                        <Button text={"Book A Table"} className={`bg-btn border-btn text-white`} />
+                        <Button text={"Book A Table"} className={`bg-[#C31C1E] border-btn text-white`} />
                         <Button text={"Book A Table"} className={` text-black border-black`} />
                     </div>
                 </div>
