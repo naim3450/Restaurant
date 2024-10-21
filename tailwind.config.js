@@ -12,14 +12,15 @@ export default {
         headding: '#101A24',
         prh: '#5C6574',
         prh2: "#2C2F24",
-        btn: '#AD343E',
+        btn: '#C31C1E',
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
         "bgImage": "url('/src/assets/banner.png')",
-        // "group": "url('/src/assets/group.png')",
+        "group": "url('/src/assets/group.png')",
+        "group2": "url('/src/assets/group2.png')",
       }
     },
   },

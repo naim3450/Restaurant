@@ -22,7 +22,7 @@ const Navber = () => {
         },
         {
             name: "Menu",
-            path: "/",
+            path: "/menu",
         },
         {
             name: "Pages",
@@ -45,7 +45,7 @@ const Navber = () => {
                         {
                             list.map((el, idx) => {
                                 return (
-                                    <List key={idx} text={el.name} />
+                                    <List to={el.path} key={idx} text={el.name} />
                                 )
                             })
                         }

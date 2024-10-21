@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Routlayout from './Component/Routlayout';
+import Menu from './Component/Menu';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route>
         <Route path='/' element={<Routlayout />}>
           <Route path='/' element={<Home />} />
+          <Route path='/menu' element={<Menu />} />
         </Route>
       </Route>
     )
