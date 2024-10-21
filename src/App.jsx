@@ -1,5 +1,5 @@
-import React from 'react'
-import Home from './Layout/Home'
+import React from "react";
+import Home from "./Layout/Home";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -7,16 +7,13 @@ import {
   Route,
 } from "react-router-dom";
 import Routlayout from './Component/Routlayout';
-import BlogPart from './Component/BlogPart';
 
 function App() {
-
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route>
         <Route path='/' element={<Routlayout />}>
           <Route path='/' element={<Home />} />
-          <Route path='/Pages' element={<BlogPart/>} />
         </Route>
       </Route>
     )
@@ -26,7 +23,7 @@ function App() {
     <div>
       <RouterProvider router={router} />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
