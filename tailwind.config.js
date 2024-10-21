@@ -16,10 +16,12 @@ export default {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        play:["Playfair Display", "serif"],
       },
       backgroundImage: {
         "bgImage": "url('/src/assets/banner.png')",
         // "group": "url('/src/assets/group.png')",
+        "contactBgImg":"url('/src/assets/contactbg.png)",
       }
     },
   },
