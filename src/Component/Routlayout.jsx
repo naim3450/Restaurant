@@ -2,6 +2,7 @@ import React from 'react'
 import Navber from './Navber'
 import { Outlet } from 'react-router-dom'
 import SubNav from './SubNav'
+import FooterPart from './FooterPart'
 
 const Routlayout = () => {
     return (
@@ -9,6 +10,7 @@ const Routlayout = () => {
             <SubNav />
             <Navber />
             <Outlet />
+            <FooterPart />
         </div>
     )
 }

@@ -19,6 +19,9 @@ export default {
       },
       backgroundImage: {
         "bgImage": "url('/src/assets/banner.png')",
+        "f_bg": "url('src/assets/Group_bg (2).png')",
+        "f_bg_left": "url('src/assets/f_bg_left.png')",
+
         // "group": "url('/src/assets/group.png')",
       }
     },

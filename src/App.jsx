@@ -7,6 +7,7 @@ import {
   Route,
 } from "react-router-dom";
 import Routlayout from './Component/Routlayout';
+import BlogPart from './Component/BlogPart';
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
       <Route>
         <Route path='/' element={<Routlayout />}>
           <Route path='/' element={<Home />} />
+          <Route path='/Pages' element={<BlogPart/>} />
         </Route>
       </Route>
     )
