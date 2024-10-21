@@ -16,6 +16,7 @@ export default {
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
+        play: ["Playfair Display", "serif"],
       },
       backgroundImage: {
         bgImage: "url('/src/assets/banner.png')",
