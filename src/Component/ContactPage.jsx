@@ -3,7 +3,7 @@ import ContactForm from "./ContactFrom"
 
 const ContactPage = () => {
   return (
-    <div className="pb-[800px] relative">
+    <div className="relative">
         <div className="absolute top-64 left-[620px]">
                 <ContactForm/>
             </div>
@@ -13,7 +13,7 @@ const ContactPage = () => {
             <p className="font-serif text-[#545E6A] text-lg text-center w-[530px] mx-auto">We consider all the drivers of change gives you the components you need to change to create a truly happens.</p>
             </div>
             
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6734275570775!2d-118.21990812556704!3d34.0522473177323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c6129c6b0c45%3A0xe2d4bbb0819df265!2sBridge%20St%2C%20Los%20Angeles%2C%20CA%2090033%2C%20USA!5e0!3m2!1sen!2sbd!4v1729500235952!5m2!1sen!2sbd" width='1900' height="550" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3305.6734275570775!2d-118.21990812556704!3d34.0522473177323!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2c6129c6b0c45%3A0xe2d4bbb0819df265!2sBridge%20St%2C%20Los%20Angeles%2C%20CA%2090033%2C%20USA!5e0!3m2!1sen!2sbd!4v1729500235952!5m2!1sen!2sbd" className="w-full h-[530px]"></iframe>
             <div className="flex justify-center gap-12 mt-10">
                 <div className="">
                     <p className="font-serif font-bold text-lg">Call us:</p>

@@ -18,7 +18,7 @@ const Navber = () => {
         },
         {
             name: "About",
-            path: "/",
+            path: "/about",
         },
         {
             name: "Menu",
@@ -26,7 +26,7 @@ const Navber = () => {
         },
         {
             name: "Pages",
-            path: "/",
+            path: "/Pages",
         },
         {
             name: "Contact",

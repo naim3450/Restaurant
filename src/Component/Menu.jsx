@@ -59,7 +59,7 @@ const Menu = () => {
 
                     <div className="grid grid-cols-3 gap-6 w-[828px]">
                         {
-                            collaborate.map((img) => <img src={img} alt="" className='h-[90px] w-[260px] object-cover' />)
+                            collaborate.map((img, idx) => <img key={idx} src={img} alt="" className='h-[90px] w-[260px] object-cover' />)
                         }
 
                     </div>

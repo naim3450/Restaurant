@@ -25,35 +25,35 @@ const ContactForm = () => {
         onSubmit={handleSubmit}
         className="bg-white rounded px-9 pt-6 pb-8 mb-4 w-full">
         <div className="flex gap-6">
-        <div className="mb-4 w-[320px]">
-          <label className="block text-prh2 text-sm font-bold mb-2" htmlFor="name">
-            Name
-          </label>
-          <input
-            className="appearance-none border rounded-full w-full py-3 px-3 text-[#737865] leading-tight focus:outline-none focus:shadow-outline font-serif"
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Your name"
-            value={formData.name}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="mb-4 w-[320px]">
+            <label className="block text-prh2 text-sm font-bold mb-2" htmlFor="name">
+              Name
+            </label>
+            <input
+              className="appearance-none border rounded-full w-full py-3 px-3 text-[#737865] leading-tight focus:outline-none focus:shadow-outline font-serif"
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Your name"
+              value={formData.name}
+              onChange={handleChange}
+            />
+          </div>
 
-        <div className="mb-4 w-[330px]">
-          <label className="block text-prh2 text-sm font-bold mb-2" htmlFor="email">
-            Email
-          </label>
-          <input
-            className="appearance-none border rounded-full w-full py-3 px-3 text-[#737865] leading-tight focus:outline-none focus:shadow-outline font-serif"
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Your email"
-            value={formData.email}
-            onChange={handleChange}
-          />
-        </div>
+          <div className="mb-4 w-[330px]">
+            <label className="block text-prh2 text-sm font-bold mb-2" htmlFor="email">
+              Email
+            </label>
+            <input
+              className="appearance-none border rounded-full w-full py-3 px-3 text-[#737865] leading-tight focus:outline-none focus:shadow-outline font-serif"
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Your email"
+              value={formData.email}
+              onChange={handleChange}
+            />
+          </div>
         </div>
 
         <div className="mb-4">
@@ -88,7 +88,7 @@ const ContactForm = () => {
 
         <div className="flex items-center justify-between">
           <button
-            className="w-full bg-btn text-black font-bold py-3 px-4 rounded-full focus:outline-none focus:shadow-outline font-serif hover:text-white transition duration-300"
+            className="w-full bg-btn border border-btn hover:text-black font-bold py-3 px-4 rounded-full focus:outline-none focus:shadow-outline font-serif hover:bg-transparent text-white transition duration-300"
             type="submit"
           >
             Send
