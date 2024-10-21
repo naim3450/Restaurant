@@ -30,7 +30,7 @@ const Navber = () => {
         },
         {
             name: "Contact",
-            path: "/",
+            path: "/contact",
         }
     ]
 

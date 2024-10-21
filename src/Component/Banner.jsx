@@ -8,7 +8,7 @@ const Banner = () => {
         <div className=" bg-bgImage bg-no-repeat bg-center bg-cover w-full h-[950px]">
             <Container>
                 <div className=" flex flex-col gap-6 items-center justify-center h-[100vh]">
-                    <h1 className='text-[100px] text-prh2 font-serif leading-[100px] font-bold w-[680px] text-center mx-auto'>
+                    <h1 className='text-[100px] text-prh2 font-play leading-[100px] font-bold w-[680px] text-center mx-auto'>
                         Best food for
                         your taste
                     </h1>
