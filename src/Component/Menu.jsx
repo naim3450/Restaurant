@@ -61,7 +61,6 @@ const Menu = () => {
                         {
                             collaborate.map((img, idx) => <img key={idx} src={img} alt="" className='h-[90px] w-[260px] object-cover' />)
                         }
-
                     </div>
                 </div>
             </Container>
