@@ -13,14 +13,21 @@ import searchVector from "../../assets/searchVector.png";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Container from "../Container";
 
 const Review = () => {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + "" + "</span>";
+    },
+  };
   return (
     <div className="py-[100px] relative">
       <div className="absolute top-10 left-0 opacity-45">
         <img src={searchVector} alt="" className="w-[300px]" />
       </div>
-      <div className="container">
+      <Container>
         <div>
           <TitleDes
             mainTitle={"What Our Customers Say"}
@@ -32,9 +39,10 @@ const Review = () => {
         <div className="pt-10">
           <div className="w-full reviewslide">
             <Swiper
-              pagination={true}
+              pagination={pagination}
               spaceBetween={30}
               slidesPerView={3}
+              clickable={true}
               modules={[Pagination]}
               className="mySwiper2"
             >
@@ -263,7 +271,7 @@ const Review = () => {
             </Swiper>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

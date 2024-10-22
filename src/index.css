@@ -50,7 +50,7 @@
     box-sizing: content-box;
     width: 32px;
     height: 44px;
-    color: #ad343e;
+    color: #ffffff;
     /*background: #fa183d;
     */
     border-radius: 50%;
@@ -98,7 +98,7 @@
   }
 
   .video-play-button:hover:after {
-    background-color: #f1ad34;
+    background-color: #ad343e;
   }
   .video-play-button:before {
     content: "";
@@ -180,6 +180,10 @@
     /* width: 90%; */
     /* height: auto; */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.75);
+  }
+
+  #play-video:hover span {
+    color: #ffffff;
   }
 
   /* ENTRANCE ANIMATION OF THE PLAY BUTTON */
