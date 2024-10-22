@@ -12,6 +12,7 @@ const VisitDetails = () => {
           </div>
           <div>
             <TitleDes p1={true} p2={true} />
+            
           </div>
         </div>
       </div>
