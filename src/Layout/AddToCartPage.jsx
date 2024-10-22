@@ -1,50 +1,48 @@
-import React, { useContext } from 'react'
-import Context from '../Context/Context'
-import Container from '../Component/Container'
-import CardThead from '../Component/CardThead'
+import React, { useContext } from "react";
+import Context from "../Context/Context";
+import Container from "../Component/Container";
+import CardThead from "../Component/CardThead";
 
 const AddToCartPage = () => {
-    
-    const { cart } = useContext(Context)
+  const { cart } = useContext(Context);
+  console.log(cart);
 
-    return (
-        <div className='mt-[8vw]'>
-            <Container>
-                <h1 className="text-3xl font-semibold mb-6">Shopping Cart</h1>
-                <div>
-                    <div className="mx-auto p-6">
-                        <div className="overflow-x-auto">
-                            <table className="min-w-full bg-white border border-gray-300">
-                                <thead>
-                                    <tr className="bg-gray-300">
-                                        <th className="py-2 px-4 border-b text-left">Product</th>
-                                        <th className="py-2 px-4 border-b text-left">Price</th>
-                                        <th className="py-2 px-4 border-b text-left">Quantity</th>
-                                        <th className="py-2 px-4 border-b text-left">Subtotal</th>
-                                        <th className="py-2 px-4 border-b text-left">Remove</th>
-                                    </tr>
-                                </thead>
-                                {
-                                    cart.map((item, idx) => {
-                                        return (
-                                            <CardThead key={idx} item={item} />
-                                        )
-                                    })
-                                }
+  return (
+    <div className="mt-[8vw]">
+      <Container>
+        <h1 className="text-3xl font-semibold mb-6">Shopping Cart</h1>
+        <div>
+          <div className="mx-auto p-6">
+            <div className="overflow-x-auto">
+              <table className="min-w-full bg-white border border-gray-300">
+                <thead>
+                  <tr className="bg-gray-300">
+                    <th className="py-2 px-4 border-b text-left">Product</th>
+                    <th className="py-2 px-4 border-b text-left">Price</th>
+                    <th className="py-2 px-4 border-b text-left">Quantity</th>
+                    <th className="py-2 px-4 border-b text-left">Subtotal</th>
+                    <th className="py-2 px-4 border-b text-left">Remove</th>
+                  </tr>
+                </thead>
+                {cart.map((item, idx) => {
+                  return <CardThead key={idx} item={item} />;
+                })}
+              </table>
+            </div>
 
-                            </table>
-                        </div>
-
-                        <div className="mt-6 flex justify-between">
-                            <button className="bg-blue text-white px-4 py-2 rounded">Continue Shopping</button>
-                            <button className="bg-blue text-white px-4 py-2 rounded">Proceed to Checkout</button>
-                        </div>
-                    </div>
-
-                </div>
-            </Container>
+            <div className="mt-6 flex justify-between">
+              <button className="bg-blue text-white px-4 py-2 rounded">
+                Continue Shopping
+              </button>
+              <button className="bg-blue text-white px-4 py-2 rounded">
+                Proceed to Checkout
+              </button>
+            </div>
+          </div>
         </div>
-    )
-}
+      </Container>
+    </div>
+  );
+};
 
-export default AddToCartPage
+export default AddToCartPage;

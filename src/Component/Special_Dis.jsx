@@ -1,4 +1,5 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
+import { toast, Bounce } from "react-toastify";
 import SpecialCard from "./SpecialCard";
 import Container from "./Container";
 import Slider from "react-slick";
@@ -6,8 +7,9 @@ import Button from "./Button";
 import Context from "../Context/Context";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { FaHeart } from "react-icons/fa6";
 
-const Special_Dis = () => {
+const Special_Dis = ({ HandleFavourit }) => {
   const settings = {
     dots: true,
     lazyLoad: true,

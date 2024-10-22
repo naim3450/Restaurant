@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import TitleDes from "../../Common/TitleDes";
 import img1 from "../../assets/restaurant-menu 1.png";
 import img2 from "../../assets/order.png";
@@ -22,6 +22,10 @@ const Video = () => {
           opacity: 1,
           zIndex: "999",
           duration: 0.5,
+        }) &&
+        gsap.to("#overlay", {
+          opacity: 1,
+          zIndex: 999,
         })
       : gsap.to("#video", {
           opacity: 1,
@@ -31,7 +35,11 @@ const Video = () => {
           opacity: 0,
           zIndex: "-999",
           duration: 0.6,
-          height: "100%",
+          height: "70%",
+        }) &&
+        gsap.to("#overlay", {
+          opacity: 0,
+          zIndex: -999,
         });
   }
 
@@ -49,13 +57,19 @@ const Video = () => {
   return (
     <div>
       <div
+        id="overlay"
+        className="bg-[#ffffff1c] backdrop-blur-xl opacity-0 z-[-999] h-[100vh] w-full fixed top-0 left-0"
+      ></div>
+      <div
         id="video2"
-        onClick={() => setplay(false)}
-        className="z-[-999] fixed w-full h-[100vh] opacity-0 top-0 left-0"
+        className="z-[-999] fixed w-full border-2 border-red-500 h-[70vh] opacity-0 top-[50%] -translate-y-[50%] left-0"
       >
         <video ref={videoref} className="h-full w-full object-cover">
           <source src="/src/video/video.mp4" />
         </video>
+        <div onClick={() => setplay(false)} className="absolute top-5 right-10">
+          <span className="text-red-600 text-2xl cursor-pointer">X</span>
+        </div>
       </div>
       <div
         id="video"
