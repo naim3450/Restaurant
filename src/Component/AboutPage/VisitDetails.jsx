@@ -10,7 +10,7 @@ const VisitDetails = () => {
   return (
     <div className="py-[100px]">
       <Container>
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center pt-20">
           <div className="relative">
             <img src={img} alt="" className="w-[550px]" />
             <div className="bg-[#474747] max-w-[411px] absolute bottom-[-47px] right-[-67px] p-[50px] rounded-xl text-white font-montserrat">
