@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import Button from './Button'
 import Container from './Container'
 import SpecialCard from './SpecialCard'
@@ -11,6 +11,8 @@ import img6 from '../assets/6.png'
 import img7 from '../assets/7.png'
 import img8 from '../assets/8.png'
 import img9 from '../assets/9.png'
+import Context from '../Context/Context'
+import AddToCartPopUp from './AddToCartPopUp'
 
 const Menu = () => {
     const menuList = ["All", "Breakfast", "Main Dishes", "Drinks", "Desserts"]
@@ -19,6 +21,12 @@ const Menu = () => {
 
     const [active, setactive] = useState(menuList[0])
 
+    const { FoodBank, activeCategory, popUp, popUpCart, cart } = useContext(Context)
+
+    const targetCategory = (el) => {
+        setactive(el)
+        activeCategory(el)
+    }
 
     return (
         <div className='bg-group bg-center bg-no-repeat bg-contain'>
@@ -32,20 +40,15 @@ const Menu = () => {
                     {
                         menuList.map((el, idx) =>
                             <Button key={idx} text={el}
-                                onClick={() => setactive(el)}
+                                onClick={() => targetCategory(el)}
                                 className={` w-[150px] !px-0 !py-[10px] text-center font-semibold ${active == el ? "bg-btn text-white border-btn" : false}`} />)
                     }
                 </div>
 
                 <div className="grid grid-cols-4 gap-7">
-                    <SpecialCard />
-                    <SpecialCard />
-                    <SpecialCard />
-                    <SpecialCard />
-                    <SpecialCard />
-                    <SpecialCard />
-                    <SpecialCard />
-                    <SpecialCard />
+                    {
+                        FoodBank.map((el) => <SpecialCard key={el.id} item={el} />)
+                    }
                 </div>
 
                 <div className="mt-[130px] py-[120px] flex items-center justify-between bg-[#F9F9F7]">
@@ -64,6 +67,8 @@ const Menu = () => {
                     </div>
                 </div>
             </Container>
+
+            <AddToCartPopUp className={`fixed z-50 top-0 left-0 ${!popUp ? "hidden" : "block"}`} />
         </div>
     )
 }
