@@ -7,6 +7,7 @@ import List from './List'
 import { FaCartPlus } from "react-icons/fa";
 import { IoIosNotifications } from "react-icons/io";
 import { CiHeart } from "react-icons/ci";
+import { Link } from 'react-router-dom'
 
 
 const Navber = () => {
@@ -18,24 +19,24 @@ const Navber = () => {
         },
         {
             name: "About",
-            path: "/",
+            path: "/about",
         },
         {
             name: "Menu",
-            path: "/",
+            path: "/menu",
         },
         {
             name: "Pages",
-            path: "/",
+            path: "/Pages",
         },
         {
             name: "Contact",
-            path: "/",
+            path: "/contact",
         }
     ]
 
     return (
-        <div className='py-4'>
+        <div className='py-4 absolute z-50 bg-[#fff] top-11 left-0 w-full'>
             <Container className={"flex items-center justify-between"}>
                 <img src={logo6} alt="" className='w-[100px] h-[80px]' />
 
@@ -45,7 +46,7 @@ const Navber = () => {
                         {
                             list.map((el, idx) => {
                                 return (
-                                    <List key={idx} text={el.name} />
+                                    <List to={el.path} key={idx} text={el.name} />
                                 )
                             })
                         }
@@ -60,9 +61,11 @@ const Navber = () => {
                             <CiHeart className='text-2xl' />
                         </button>
 
-                        <button className=''>
-                            <FaCartPlus className='text-[22px] text-blck' />
-                        </button>
+                        <Link to={'/AddToCart'}>
+                            <button className=''>
+                                <FaCartPlus className='text-[22px] text-blck' />
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </Container>

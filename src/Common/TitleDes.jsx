@@ -11,11 +11,10 @@ const TitleDes = ({
   textCenter = false,
 }) => {
   return (
-    <div className={`${className} max-w-[557px] flex flex-col`}>
+    <div className={`${className} max-w-[555px] flex flex-col`}>
       <h3
-        className={`${TitleWhite ? "text-white" : "text-prh2"} ${
-          textCenter && "text-center"
-        } font-serif text-[4vw] pb-6 font-medium leading-[60px]`}
+        className={`${TitleWhite ? "text-white" : "text-prh2"} ${textCenter && "text-center"
+          } font-serif text-[55px] pb-6 font-medium leading-[60px]`}
       >
         {mainTitle ? mainTitle : "We provide healthy food for your family."}
       </h3>

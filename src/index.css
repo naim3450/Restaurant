@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.slick-list {
+  padding: 5vh 0;
+}
+
+
 @layer base {
   * {
     @apply m-0 p-0 outline-none box-border;
@@ -31,12 +37,14 @@
   li {
     @apply list-none;
   }
+
   img {
     @apply align-middle;
   }
 }
 
 @layer components {
+
   /* Play button css*/
   .video-play-button {
     display: flex;
@@ -52,10 +60,10 @@
     height: 44px;
     color: #ffffff;
     /*background: #fa183d;
-    */
+      */
     border-radius: 50%;
     /*padding: 18px 20px 18px 28px;
-    */
+      */
     -webkit-transform: translateX(-40%) translateY(-50%);
     -moz-transform: translateX(-50%) translateY(-50%);
     -ms-transform: translateX(-50%) translateY(-50%);
@@ -100,6 +108,7 @@
   .video-play-button:hover:after {
     background-color: #ad343e;
   }
+
   .video-play-button:before {
     content: "";
     color: #ad343e;
@@ -129,6 +138,7 @@
       transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
       opacity: 1;
     }
+
     100% {
       transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
       opacity: 0;
@@ -189,26 +199,29 @@
   /* ENTRANCE ANIMATION OF THE PLAY BUTTON */
 
   .video-play-button {
-    -webkit-animation: scale-up-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55)
-      both;
+    -webkit-animation: scale-up-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
     animation: scale-up-center 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
   }
 
-  .video-play-button {
+  /* @keyframes video-play-button {
     0% {
       -webkit-transform: scale(0.5);
       transform: scale(0.5);
     }
+
     100% {
       -webkit-transform: scale(1);
       transform: scale(1);
     }
-  }
+  } */
+
+
   @keyframes scale-up-center {
     0% {
       -webkit-transform: scale(0.5);
       transform: scale(0.5);
     }
+
     100% {
       -webkit-transform: scale(1);
       transform: scale(1);

@@ -4,6 +4,7 @@ import check from "../assets/check.png";
 import { IoIosCheckmark } from "react-icons/io";
 import chef from "../assets/chef1.png";
 import onion from "../assets/onion.png";
+import Container from "./Container";
 
 const Chef = () => {
   return (
@@ -14,7 +15,7 @@ const Chef = () => {
       >
         <img src={onion} alt="" className="w-[310]" />
       </div>
-      <div className="container">
+      <Container>
         <div className="flex items-center justify-between">
           {/* left */}
           <div className="max-w-[520px]">
@@ -104,7 +105,7 @@ const Chef = () => {
             <img src={chef} alt="" className="w-[560px]" />
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

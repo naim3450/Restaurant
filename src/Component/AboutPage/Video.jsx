@@ -68,9 +68,7 @@ const Video = () => {
             <IoIosPlay />
           </span>
         </a>
-        <div id="video-overlay" className="video-overlay">
-          <a className="video-overlay-close">&times;</a>
-        </div>
+
         <div className="flex items-center justify-center w-full absolute top-[65%] left-[50%] -translate-x-[50%] -translate-y-[60%]">
           <TitleDes
             mainTitle={"Feel the authentic & original taste from us"}

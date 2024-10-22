@@ -12,16 +12,18 @@ export default {
         headding: "#101A24",
         prh: "#5C6574",
         prh2: "#2C2F24",
-        btn: "#AD343E",
+        btn: '#C31C1E',
       },
       fontFamily: {
         montserrat: ["Montserrat", "sans-serif"],
         play: ["Playfair Display", "serif"],
       },
       backgroundImage: {
-        bgImage: "url('/src/assets/banner.png')",
-        // "group": "url('/src/assets/group.png')",
-      },
+        "bgImage": "url('/src/assets/banner.png')",
+        "group": "url('/src/assets/group.png')",
+        "group_bg": "url('/src/assets/Group_bg_2.png')",
+        "contactBgImg": "url('/src/assets/contactbg.png)",
+      }
     },
   },
   plugins: [],
