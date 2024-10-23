@@ -6,6 +6,7 @@ import icon2 from "../../assets/Icon2.png";
 import icon3 from "../../assets/Icon3.png";
 import vector from "../../assets/vector.png";
 import vector2 from "../../assets/vector2.png";
+import Container from "../Container";
 
 const Delivery = () => {
   return (
@@ -16,7 +17,7 @@ const Delivery = () => {
       <div className="absolute right-0 bottom-0 -z-10">
         <img src={vector} alt="" className="w-[328px] opacity-55" />
       </div>
-      <div className="container">
+      <Container>
         <div className="flex items-center justify-between">
           {/* left */}
           <div>
@@ -55,7 +56,7 @@ const Delivery = () => {
             </div>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

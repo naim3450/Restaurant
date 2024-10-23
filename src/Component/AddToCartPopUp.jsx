@@ -82,7 +82,7 @@ function AddToCartPopUp({ className }) {
                                         +
                                     </button>
                                 </div>
-                                <p className="text-lg font-semibold">${el.price}</p>
+                                <p className="text-lg font-semibold">${quantity * el.price}</p>
                             </div>
 
                             {/* Add to Cart Button */}

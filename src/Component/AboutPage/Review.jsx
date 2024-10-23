@@ -1,4 +1,3 @@
-import React from "react";
 import TitleDes from "../../Common/TitleDes";
 import { FaStar } from "react-icons/fa";
 import { FaStarHalfStroke } from "react-icons/fa6";
@@ -7,20 +6,27 @@ import customerImg1 from "../../assets/customer1.png";
 import customerImg2 from "../../assets/customer2.png";
 import customerImg3 from "../../assets/customer3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 import searchVector from "../../assets/searchVector.png";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import Container from "../Container";
 
 const Review = () => {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + "" + "</span>";
+    },
+  };
   return (
     <div className="py-[100px] relative">
       <div className="absolute top-10 left-0 opacity-45">
         <img src={searchVector} alt="" className="w-[300px]" />
       </div>
-      <div className="container">
+      <Container>
         <div>
           <TitleDes
             mainTitle={"What Our Customers Say"}
@@ -32,10 +38,15 @@ const Review = () => {
         <div className="pt-10">
           <div className="w-full reviewslide">
             <Swiper
-              pagination={true}
+              autoplay={{
+                delay: 1000,
+                disableOnInteraction: false,
+              }}
+              pagination={pagination}
               spaceBetween={30}
               slidesPerView={3}
-              modules={[Pagination]}
+              clickable={true}
+              modules={[Pagination, Autoplay]}
               className="mySwiper2"
             >
               <SwiperSlide>
@@ -263,7 +274,7 @@ const Review = () => {
             </Swiper>
           </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Context from '../Context/Context'
 
 const CardThead = ({ item }) => {
 
-    const { id, name, price, quantity, image, Variation } = item
+    const { id, name, price, quantity, image } = item
 
     const [cartQu, setcartQu] = useState(quantity)
 
@@ -27,14 +27,6 @@ const CardThead = ({ item }) => {
                         <span className="px-4 h-[36px] border flex items-center justify-center">{quantity}</span>
 
                         <button onClick={() => increment(id)} className="bg-gray-200 px-4 h-[36px] rounded">+</button>
-                    </div>
-                </td>
-
-                <td className="py-4 px-4 border-b">
-                    <div className="w-[2vw]">
-                        <option className='w-[3.5vw]'>
-                            {Variation}
-                        </option>
                     </div>
                 </td>
 

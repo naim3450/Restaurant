@@ -1,6 +1,6 @@
 import React from "react";
-import TitleDes from "../Common/TitleDes";
 import { IoIosCheckmark } from "react-icons/io";
+import TitleDes from "../Common/TitleDes";
 import chef from "../assets/chef1.png";
 import onion from "../assets/onion.png";
 import Container from "./Container";

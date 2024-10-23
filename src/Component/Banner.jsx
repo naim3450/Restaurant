@@ -1,4 +1,5 @@
 import React from 'react'
+import banner from '../assets/banner.png'
 import Container from './Container'
 import Button from './Button'
 

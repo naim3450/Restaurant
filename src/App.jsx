@@ -13,6 +13,7 @@ import About from "./Layout/About";
 import BlogPart from "./Component/BlogPart";
 import BlogDetails from "./Component/BlogDetails";
 import AddToCartPage from "./Layout/AddToCartPage";
+import Wishlist from "./Layout/Wishlist";
 
 function App() {
   const router = createBrowserRouter(
@@ -26,6 +27,7 @@ function App() {
           <Route path='/contact' element={<ContactPage />} />
           <Route path='/blog' element={<BlogDetails />} />
           <Route path='/AddToCart' element={<AddToCartPage />} />
+          <Route path='/wishlist' element={<Wishlist />} />
         </Route>
       </Route>
     )

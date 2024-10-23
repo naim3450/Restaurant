@@ -28,7 +28,7 @@ const Routlayout = () => {
                     </div>
 
                     {
-                        cart.map((el) => <CartDropdown className={"animateCart"} key={el.id} item={el} />)
+                        cart.map((el) => <CartDropdown key={el.id} item={el} />)
                     }
 
                 </div>
