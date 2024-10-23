@@ -45,7 +45,6 @@ const AddToCartPage = () => {
                             </button>
                         </div>
                     </div>
-
                 </div>
             </Container>
         </div>
