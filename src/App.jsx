@@ -14,6 +14,7 @@ import BlogPart from "./Component/BlogPart";
 import BlogDetails from "./Component/BlogDetails";
 import AddToCartPage from "./Layout/AddToCartPage";
 import Wishlist from "./Layout/Wishlist";
+import ProductDetails from "./Component/ProductDetails";
 
 function App() {
   const router = createBrowserRouter(
@@ -23,11 +24,12 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/menu' element={<Menu />} />
-          <Route path='/Pages' element={<BlogPart />} />
+          <Route path='/blog' element={<BlogPart />} />
           <Route path='/contact' element={<ContactPage />} />
-          <Route path='/blog' element={<BlogDetails />} />
+          <Route path='/blog_details/:id' element={<BlogDetails />} />
           <Route path='/AddToCart' element={<AddToCartPage />} />
           <Route path='/wishlist' element={<Wishlist />} />
+          <Route path='/singleProduct/:id' element={<ProductDetails />} />
         </Route>
       </Route>
     )

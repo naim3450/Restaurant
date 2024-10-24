@@ -25,6 +25,48 @@ import f17 from "../assets/Food/f17.png";
 import f18 from "../assets/Food/f18.png";
 import f19 from "../assets/Food/f19.png";
 import f20 from "../assets/Food/f20.png";
+import ft1_1 from "../assets/thums/ft1_1.png";
+import ft1_2 from "../assets/thums/ft1_2.png";
+import ft1_3 from "../assets/thums/ft1_3.png";
+import ft2_1 from "../assets/thums/ft2_1.png";
+import ft2_2 from "../assets/thums/ft2_2.png";
+import ft2_3 from "../assets/thums/ft2_3.png";
+import ft3_1 from "../assets/thums/ft3_1.png";
+import ft3_2 from "../assets/thums/ft3_2.png";
+import ft3_3 from "../assets/thums/ft3_3.png";
+import ft4_1 from "../assets/thums/ft4_1.png";
+import ft4_2 from "../assets/thums/ft4_2.png";
+import ft4_3 from "../assets/thums/ft4_3.png";
+import ft5_1 from "../assets/thums/ft5_1.png";
+import ft5_2 from "../assets/thums/ft5_2.png";
+import ft5_3 from "../assets/thums/ft5_3.png";
+import ft6_1 from "../assets/thums/ft6_1.png";
+import ft6_2 from "../assets/thums/ft6_2.png";
+import ft6_3 from "../assets/thums/ft6_3.png";
+import ft7_1 from "../assets/thums/ft7_1.png";
+import ft7_2 from "../assets/thums/ft7_2.png";
+import ft7_3 from "../assets/thums/ft7_3.png";
+import ft8_1 from "../assets/thums/ft8_1.png";
+import ft8_2 from "../assets/thums/ft8_2.png";
+import ft8_3 from "../assets/thums/ft8_3.png";
+import ft9_1 from "../assets/thums/ft9_1.png";
+import ft9_2 from "../assets/thums/ft9_2.png";
+import ft9_3 from "../assets/thums/ft9_3.png";
+import ft10_1 from "../assets/thums/ft10_1.png";
+import ft10_2 from "../assets/thums/ft10_2.png";
+import ft10_3 from "../assets/thums/ft10_3.png";
+import ft11_1 from "../assets/thums/ft11_1.png";
+import ft11_2 from "../assets/thums/ft11_2.png";
+import ft11_3 from "../assets/thums/ft11_3.png";
+import ft12_1 from "../assets/thums/ft12_1.png";
+import ft12_2 from "../assets/thums/ft12_2.png";
+import ft12_3 from "../assets/thums/ft12_3.png";
+import ft13_1 from "../assets/thums/ft13_1.png";
+import ft13_2 from "../assets/thums/ft13_2.png";
+import ft13_3 from "../assets/thums/ft13_3.png";
+import ft14_1 from "../assets/thums/ft14_1.png";
+import ft14_2 from "../assets/thums/ft14_2.png";
+import ft14_3 from "../assets/thums/ft14_3.png";
 
 const getLOcalStore = () => {
   const localsotreData = localStorage.getItem("FoodList");
@@ -53,9 +95,30 @@ const lovegetLOcalStore = () => {
   }
 };
 
+const dltsProduct = () => {
+  const localsotreData = localStorage.getItem("productdetails");
+  if (!localsotreData) {
+    return [];
+  } else {
+    return JSON.parse(localsotreData);
+  }
+
+};
+
+
+const CartPageLocal = () => {
+  const localsotreData = localStorage.getItem("addToCartPage");
+  if (!localsotreData) {
+    return [];
+  } else {
+    return JSON.parse(localsotreData);
+  }
+};
+
 const inisialState = {
   FoodBank: [],
   filtterFood: [],
+  thums: [],
   featureFood: [],
   favouriteFood: FvgetLOcalStore(),
   popUp: false,
@@ -65,9 +128,13 @@ const inisialState = {
   ddCart: false,
   totalQuantity: 0,
   totalFv: 0,
+  checkOut: dltsProduct(),
+  cartPage: CartPageLocal(),
+  Blog_D: [],
 };
 
 const ContextState = ({ children }) => {
+
   const [state, dispatch] = useReducer(reducer, inisialState);
 
   const api = [
@@ -79,6 +146,7 @@ const ContextState = ({ children }) => {
       price: 3.6,
       image: dish3,
       category: "Main Dishes",
+      thums: [dish3, ft1_1, ft1_2],
       feature: true,
     },
     {
@@ -89,6 +157,7 @@ const ContextState = ({ children }) => {
       price: 3.5,
       image: f10,
       category: "Main Dishes",
+      thums: [f10, ft1_3, ft2_1],
       feature: false,
     },
     {
@@ -99,6 +168,7 @@ const ContextState = ({ children }) => {
       price: 1.5,
       image: f9,
       category: "Breakfast",
+      thums: [f9, ft2_2, ft2_3],
       feature: false,
     },
     {
@@ -109,6 +179,7 @@ const ContextState = ({ children }) => {
       price: 4.2,
       image: dish2,
       category: "Main Dishes",
+      thums: [dish2, ft3_1, ft3_2],
       feature: true,
     },
     {
@@ -119,6 +190,7 @@ const ContextState = ({ children }) => {
       price: 2.3,
       image: f13,
       category: "Breakfast",
+      thums: [f13, ft3_3, ft4_1],
       feature: false,
     },
     {
@@ -129,6 +201,7 @@ const ContextState = ({ children }) => {
       price: 1.4,
       image: f7,
       category: "Breakfast",
+      thums: [f7, ft4_2, ft4_3],
       feature: false,
     },
     {
@@ -139,6 +212,7 @@ const ContextState = ({ children }) => {
       price: 1.5,
       image: dish4,
       category: "Breakfast",
+      thums: [dish4, ft5_1, ft5_2],
       feature: true,
     },
     {
@@ -149,6 +223,7 @@ const ContextState = ({ children }) => {
       price: 1.15,
       image: f1,
       category: "Breakfast",
+      thums: [f1, ft5_3, ft6_1],
       feature: false,
     },
     {
@@ -159,6 +234,7 @@ const ContextState = ({ children }) => {
       price: 1.15,
       image: f2,
       category: "Main Dishes",
+      thums: [f2, ft6_2, ft6_3],
       feature: false,
     },
     {
@@ -169,6 +245,7 @@ const ContextState = ({ children }) => {
       price: 1.15,
       image: f3,
       category: "Desserts",
+      thums: [f3, ft7_1, ft7_2],
       feature: false,
     },
     {
@@ -179,6 +256,7 @@ const ContextState = ({ children }) => {
       price: 1.5,
       image: f4,
       category: "Main Dishes",
+      thums: [f4, ft7_3, ft8_1],
       feature: false,
     },
     {
@@ -189,6 +267,7 @@ const ContextState = ({ children }) => {
       price: 1.5,
       image: f5,
       category: "Main Dishes",
+      thums: [f5, ft8_2, ft8_3],
       feature: false,
     },
     {
@@ -199,6 +278,7 @@ const ContextState = ({ children }) => {
       price: 5.2,
       image: dish,
       category: "Main Dishes",
+      thums: [dish, ft9_1, ft9_2],
       feature: true,
     },
     {
@@ -209,6 +289,7 @@ const ContextState = ({ children }) => {
       price: 5.2,
       image: f11,
       category: "Desserts",
+      thums: [f11, ft9_3, ft10_1],
       feature: false,
     },
     {
@@ -219,6 +300,7 @@ const ContextState = ({ children }) => {
       price: 4.3,
       image: f12,
       category: "Desserts",
+      thums: [f12, ft10_2, ft10_3],
       feature: false,
     },
     {
@@ -229,6 +311,7 @@ const ContextState = ({ children }) => {
       price: 1.5,
       image: f6,
       category: "Breakfast",
+      thums: [f6, ft11_1, ft11_2],
       feature: false,
     },
     {
@@ -239,6 +322,7 @@ const ContextState = ({ children }) => {
       price: 4.3,
       image: f14,
       category: "Drinks",
+      thums: [f14, ft11_3, ft12_1],
       feature: false,
     },
     {
@@ -249,6 +333,7 @@ const ContextState = ({ children }) => {
       price: 2.4,
       image: f15,
       category: "Drinks",
+      thums: [f15, ft12_2, ft12_3],
       feature: false,
     },
     {
@@ -259,6 +344,7 @@ const ContextState = ({ children }) => {
       price: 1.9,
       image: f16,
       category: "Main Dishes",
+      thums: [f16, ft13_1, ft13_2],
       feature: false,
     },
     {
@@ -269,6 +355,7 @@ const ContextState = ({ children }) => {
       price: 3.4,
       image: f17,
       category: "Main Dishes",
+      thums: [f17, ft13_3, ft14_1],
       feature: false,
     },
     {
@@ -279,6 +366,7 @@ const ContextState = ({ children }) => {
       price: 3.4,
       image: f18,
       category: "Main Dishes",
+      thums: [f18, ft14_2, ft14_3],
       feature: false,
     },
     {
@@ -289,6 +377,7 @@ const ContextState = ({ children }) => {
       price: 3.4,
       image: f19,
       category: "Desserts",
+      thums: [],
       feature: false,
     },
     {
@@ -299,6 +388,7 @@ const ContextState = ({ children }) => {
       price: 3.4,
       image: f20,
       category: "Desserts",
+      thums: [],
       feature: false,
     },
     {
@@ -309,6 +399,7 @@ const ContextState = ({ children }) => {
       price: 1.8,
       image: f8,
       category: "Breakfast",
+      thums: [],
       feature: false,
     },
   ];
@@ -382,11 +473,24 @@ const ContextState = ({ children }) => {
   };
   // removeCart part end
 
-  // localsotre start
+  //FoodList localsotre start
   useEffect(() => {
     localStorage.setItem("FoodList", JSON.stringify(state.cart));
   }, [state.cart]);
-  // localsotre end
+  //FoodList localsotre end
+
+
+  //productdetails localsotre start
+  useEffect(() => {
+    localStorage.setItem("productdetails", JSON.stringify(state.checkOut));
+  }, [state.checkOut]);
+  //productdetails localsotre end
+
+  //addToCartPage localsotre start
+  useEffect(() => {
+    localStorage.setItem("addToCartPage", JSON.stringify(state.cartPage));
+  }, [state.cartPage]);
+  //addToCartPage localsotre end
 
   // fv localsotre start
   useEffect(() => {
@@ -418,7 +522,6 @@ const ContextState = ({ children }) => {
   };
   // decrement end
 
-
   // ToQuantity  And  TotalAmount 
   useEffect(() => {
     dispatch({ type: "totalQuantity" })
@@ -446,6 +549,58 @@ const ContextState = ({ children }) => {
     })
   }
   // CloseCart end
+
+  // handleCheckout start
+  const handleCheckout = (id, quantity, Variation) => {
+    dispatch({
+      type: "handleCheckout",
+      payload: { id, quantity, Variation }
+    })
+  }
+
+  // handleCheckout end
+
+
+  // addToCartPage start
+  const addToCartPage = (id, quantity, Variation) => {
+    dispatch({
+      type: "addToCartPage",
+      payload: { id, quantity, Variation }
+    })
+  }
+  // addToCartPage end
+
+
+  // removeCartPage Start
+  const removeCartPage = (id) => {
+    dispatch({
+      type: "removeCartPage",
+      payload: id
+    })
+  }
+  // removeCartPage End
+
+
+  // searchFilter start
+  const searchFilter = (value) => {
+    dispatch({
+      type: "searchFilter",
+      payload: value,
+    });
+  };
+  // searchFilter end
+
+
+  // addBlogDetails start
+  const addBlogDetails = (id) => {
+    dispatch({
+      type: "addBlogDetails",
+      payload: id,
+    });
+  };
+  // addBlogDetails end
+
+
   return (
     <Context.Provider
       value={{
@@ -461,6 +616,11 @@ const ContextState = ({ children }) => {
         removeWish,
         CartDropDown,
         CloseCart,
+        handleCheckout,
+        addToCartPage,
+        removeCartPage,
+        searchFilter,
+        addBlogDetails,
       }}
     >
       {children}

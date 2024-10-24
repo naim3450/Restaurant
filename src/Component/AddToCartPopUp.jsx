@@ -20,7 +20,6 @@ function AddToCartPopUp({ className }) {
         setquantity(1)
     }
 
-
     return (
         <div className={`flex justify-center items-center w-full min-h-screen bg-[#00000070] ${className}`}>
             {
@@ -56,10 +55,10 @@ function AddToCartPopUp({ className }) {
                                         Small
                                     </option>
                                     <option >
-                                        Larg
+                                        Medium
                                     </option>
                                     <option>
-                                        Big
+                                        Large
                                     </option>
                                 </select>
                             </div>

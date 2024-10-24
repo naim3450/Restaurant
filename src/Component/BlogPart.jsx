@@ -4,9 +4,10 @@ import BlogCard from "./BlogCard";
 import Blog_one from '../assets/blog_one.jpg'
 import { useContext } from "react";
 import Context from "../Context/Context";
+import { Link } from "react-router-dom";
 const BlogPart = () => {
 
-  const { FoodBank } = useContext(Context)
+  const { FoodBank, addBlogDetails } = useContext(Context)
   return (
     <section className="py-20 mt-[6vw]">
       <Container>
@@ -21,16 +22,17 @@ const BlogPart = () => {
         </div>
         <div className="mt-14 flex flex-wrap gap-5 justify-center">
           {
-            FoodBank.map((el) => {
+            FoodBank.map((el, idx) => {
               return (
-                < BlogCard
-                  src={el.image}
-                  ptext={el.name}
-                  headding={el.description.slice(0, 60)}
-                />
+                <Link key={idx} to={`/blog_details/${idx}`} onClick={() => addBlogDetails(el.id)}>
+                  < BlogCard
+                    src={el.image}
+                    ptext={el.name}
+                    headding={el.description.slice(0, 60)}
+                  />
+                </Link>
               )
             })
-
           }
         </div>
       </Container>

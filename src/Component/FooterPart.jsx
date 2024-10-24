@@ -19,54 +19,54 @@ const FooterPart = () => {
         </div>
         <div className="flex justify-between">
           <div className="">
-            <FooterList text={`Our Products`} className={`text-[24px] text-white hover:`} />
+            <FooterList text={`Our Products`} className={`text-[24px] text-white hover:text-btn`} />
             <FooterList
               text={`Our menus`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
             <FooterList
               text={`Our burgers`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
             <FooterList
               text={`Our times sides`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
             <FooterList
               text={`Our naandwiches`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
           </div>
           {/* 2nd part */}
           <div className="">
             <FooterList
               text={`legal information`}
-              className={`text-[24px] text-white hover:`}
+              className={`text-[24px] text-white hover:text-btn`}
             />
             <FooterList
               text={`Legal Notice`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
           </div>
           {/* 3rd part */}
           <div className="">
-            <FooterList text={`Contact us`} className={`text-[24px] text-white hover:`} />
+            <FooterList text={`Contact us`} className={`text-[24px] text-white hover:text-btn`} />
             <FooterList
               text={`Contacts`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
             <FooterList
               text={`Our addresses`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
             <FooterList
               text={`Become a Times Square franchisee`}
-              className={`font-light text-lg text-white hover:`}
+              className={`font-light text-lg text-white hover:text-btn`}
             />
           </div>
           {/* 4th part */}
           <div className="">
-            <FooterList text={`We accept`} className={`text-[24px] text-white hover:`} />
+            <FooterList text={`We accept`} className={`text-[24px] text-white hover:text-btn`} />
             <div className="flex mt-3">
               <img src={MasCard} alt="Mastercard.png" />
               <img src={Visa} alt="Visa.png" />
@@ -75,24 +75,25 @@ const FooterPart = () => {
           </div>
         </div>
       </Container>
+      
       <Container>
         <div className="border-t border-[#4F4F4F] flex justify-between mt-16">
           <div className="flex gap-2 mt-6">
-            <div className="bg-white hover:bg-[#c31c1edb] h-6 w-6 rounded-full flex items-center justify-center">
-              <TiSocialFacebook className="text-black text-[22px] hover:text-white" />
+            <div className=" hover:shadow-sm hover:shadow-gray-500 h-6 w-6 rounded-full flex items-center justify-center">
+              <TiSocialFacebook className="text-white text-[22px]" />
             </div>
-            <div className=" h-7 w-7 hover:bg-[#c31c1edb] rounded-full flex items-center justify-center">
+            <div className=" h-7 w-7 hover:shadow-sm hover:shadow-gray-500 rounded-full flex items-center justify-center">
               <FaTwitter className="text-white " />
             </div>
-            <div className=" h-7 w-7 hover:bg-[#c31c1edb] rounded-full flex items-center justify-center">
+            <div className=" h-7 w-7 hover:shadow-sm hover:shadow-gray-500 rounded-full flex items-center justify-center">
               <FaInstagram className="text-white" />
             </div>
-            <div className="bg-white hover:bg-[#c31c1edb] h-6 w-6 rounded-md  flex items-center justify-center">
-              <FaLinkedinIn className="text-black hover:text-white" />
+            <div className=" hover:shadow-sm hover:shadow-gray-500 h-6 w-6 rounded-md  flex items-center justify-center">
+              <FaLinkedinIn className="text-white" />
             </div>
           </div>
           <div className="mt-6">
-            <p className="text-base hover:bg-[#c31c1edb] text-white font-montserrat font-light leading-5">
+            <p className="text-base text-white font-montserrat font-light leading-5">
               © 2024 Nayef All rights reserved.
             </p>
           </div>

@@ -6,12 +6,12 @@ import Context from "../Context/Context";
 import Button from "./Button";
 import Container from "./Container";
 import SpecialCard from "./SpecialCard";
+import { Link } from "react-router-dom";
 
 const Special_Dis = ({ HandleFavourit }) => {
   const settings = {
     dots: true,
     lazyLoad: true,
-    // infinite: true,
     speed: 600,
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -34,10 +34,12 @@ const Special_Dis = ({ HandleFavourit }) => {
         </Slider>
 
         <div className="flex items-center justify-center">
-          <Button
-            text={"See All"}
-            className={`px-[56px] py-[16px] bg-black text-white mt-[50px] `}
-          />
+          <Link to={'/menu'}>
+            <Button
+              text={"See All"}
+              className={`px-[56px] py-[16px] bg-black text-white mt-[50px] `}
+            />
+          </Link>
         </div>
       </Container>
     </div>

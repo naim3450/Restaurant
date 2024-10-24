@@ -3,11 +3,9 @@ import Context from '../Context/Context'
 
 const CardThead = ({ item }) => {
 
-    const { id, name, price, quantity, image } = item
+    const { id, name, price, quantity, Variation, image } = item
 
-    const [cartQu, setcartQu] = useState(quantity)
-
-    const { removeCart, increment, decrement } = useContext(Context)
+    const { removeCartPage, increment, decrement } = useContext(Context)
     return (
         <tbody>
             <tr>
@@ -30,9 +28,10 @@ const CardThead = ({ item }) => {
                     </div>
                 </td>
 
+                <td>{Variation}</td>
                 <td className="py-4 px-4 border-b" id="subtotal">${(price * quantity).toFixed()}</td>
                 <td className="py-4 px-4 border-b">
-                    <button className="text-red-600 hover:text-red-800" onClick={() => removeCart(id)}>Remove</button>
+                    <button className="text-red-600 hover:text-red-800" onClick={() => removeCartPage(id)}>Remove</button>
                 </td>
             </tr>
 

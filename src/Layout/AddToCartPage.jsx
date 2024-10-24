@@ -5,7 +5,7 @@ import CardThead from '../Component/CardThead'
 
 const AddToCartPage = () => {
 
-    const { cart } = useContext(Context)
+    const { cartPage } = useContext(Context)
 
     return (
         <div className='mt-[8vw]'>
@@ -26,7 +26,7 @@ const AddToCartPage = () => {
                                     </tr>
                                 </thead>
                                 {
-                                    cart.map((item, idx) => {
+                                    cartPage.map((item, idx) => {
                                         return (
                                             <CardThead key={idx} item={item} />
                                         )

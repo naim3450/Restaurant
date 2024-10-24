@@ -82,17 +82,17 @@ const Chef = () => {
               </div>
             </div>
             {/* button */}
-            <div className="pt-10 flex items-center gap-x-6">
+            <div className="pt-10 flex items-center gap-x-2">
               <button
                 className={
-                  "py-3 rounded-tl-xl rounded-bl-xl  px-8 text-xl font-medium text-white bg-btn font-serif hover:bg-[#8f2c35]"
+                  "py-3 rounded-tl-full rounded-bl-full  px-8 text-xl font-medium text-white bg-btn font-serif"
                 }
               >
                 Book a table{" "}
               </button>
               <button
                 className={
-                  "py-3 rounded-tr-xl rounded-br-xl px-8 text-xl font-medium text-white bg-yellow-500 font-serif hover:bg-yellow-600"
+                  "py-3 rounded-tr-full rounded-br-full px-8 text-xl font-medium text-white bg-[#F66A1D] font-serif hover:bg-[#F66A1D]"
                 }
               >
                 Menu

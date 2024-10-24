@@ -13,6 +13,7 @@ import img8 from "../assets/8.png";
 import img9 from "../assets/9.png";
 import Context from "../Context/Context";
 import AddToCartPopUp from "./AddToCartPopUp";
+import SearchBar from "./SearchBar";
 
 const Menu = () => {
   const menuList = ["All", "Breakfast", "Main Dishes", "Drinks", "Desserts"];
@@ -39,15 +40,18 @@ const Menu = () => {
           need to change to create a truly happens.
         </p>
 
+        <div className="flex items-center justify-center mt-10">
+          <SearchBar />
+        </div>
+
         <div className="flex justify-center gap-4  py-[50px]">
           {menuList.map((el, idx) => (
             <Button
               key={idx}
               text={el}
               onClick={() => targetCategory(el)}
-              className={` w-[150px] !px-0 !py-[10px] text-center font-semibold ${
-                active == el ? "bg-btn text-white border-btn" : false
-              }`}
+              className={` w-[150px] !px-0 !py-[10px] text-center font-semibold ${active == el ? "bg-btn text-white border-btn" : false
+                }`}
             />
           ))}
         </div>

@@ -92,6 +92,7 @@ export const reducer = (state, action) => {
       price: add[0].price,
       image: add[0].image,
       category: add[0].category,
+      thums: add[0].thums,
       feature: add[0].feature,
       quantity: quantity,
       Variation: Variation,
@@ -156,52 +157,6 @@ export const reducer = (state, action) => {
       ),
     };
   }
-  // increment start
-  if (action.type == "increment") {
-    let inc = state.cart.map((el) => {
-      if (el.id == action.payload) {
-        let IncQun = el.quantity + 1;
-        return {
-          ...el,
-          quantity: IncQun,
-        };
-      }
-      return el;
-    });
-
-    return {
-      ...state,
-      cart: inc,
-    };
-  }
-  // increment end
-
-  // decrement start
-  if (action.type == "decrement") {
-    let dec = state.cart.map((el) => {
-      if (el.id == action.payload) {
-        let DecQun = el.quantity - 1;
-
-        if (el.quantity <= 1) {
-          DecQun = 1;
-        }
-
-        return {
-          ...el,
-          quantity: DecQun,
-        };
-      }
-      return el;
-    });
-
-    return {
-      ...state,
-      cart: dec,
-    };
-  }
-  // decrement end
-
-
 
   // CartDropDown start 
   if (action.type == "CartDropDown") {
@@ -245,6 +200,174 @@ export const reducer = (state, action) => {
     }
   }
   // totalQuantity end 
+
+
+  // handleCheckout start 
+  if (action.type == "handleCheckout") {
+    const { id, quantity, Variation } = action.payload;
+
+    const add = state.filtterFood.filter((el) => {
+      if (el.id === id) {
+        return el;
+      }
+    });
+
+    let obj = {
+      id: add[0].id,
+      name: add[0].name,
+      description: add[0].description,
+      price: add[0].price,
+      image: add[0].image,
+      category: add[0].category,
+      thums: add[0].thums,
+      feature: add[0].feature,
+      quantity: quantity,
+      Variation: Variation,
+    };
+
+    return {
+      ...state,
+      checkOut: obj,
+      ddCart: false,
+    }
+  }
+  // handleCheckout end 
+
+
+
+
+  // addToCart start
+  if (action.type == "addToCartPage") {
+    const { id, quantity, Variation } = action.payload;
+
+    const add = state.filtterFood.filter((el) => {
+      if (el.id === id) {
+        return el;
+      }
+    });
+
+    let obj = {
+      id: add[0].id,
+      name: add[0].name,
+      description: add[0].description,
+      price: add[0].price,
+      image: add[0].image,
+      category: add[0].category,
+      thums: add[0].thums,
+      feature: add[0].feature,
+      quantity: quantity,
+      Variation: Variation,
+    };
+
+    const match = state.cart.find((elm) => elm.id == id);
+
+    if (match) {
+      let updateQuntity = state.cart.map((el) => {
+        if (el.id == id) {
+          const nweQuantity = el.quantity + quantity;
+          return {
+            ...el,
+            quantity: nweQuantity,
+          };
+        } else {
+          return el;
+        }
+      });
+
+      return {
+        ...state,
+        cartPage: updateQuntity,
+      };
+    }
+    else {
+      return {
+        ...state,
+        popUp: false,
+        cartPage: [...state.cartPage, obj]
+      };
+    }
+  }
+
+  // addToCart end
+
+
+
+  // increment start
+  if (action.type == "increment") {
+    let inc = state.cartPage.map((el) => {
+      if (el.id == action.payload) {
+        let IncQun = el.quantity + 1;
+        return {
+          ...el,
+          quantity: IncQun,
+        };
+      }
+      return el;
+    });
+
+    return {
+      ...state,
+      cartPage: inc,
+    };
+  }
+  // increment end
+
+  // decrement start
+  if (action.type == "decrement") {
+    let dec = state.cartPage.map((el) => {
+      if (el.id == action.payload) {
+        let DecQun = el.quantity - 1;
+
+        if (el.quantity <= 1) {
+          DecQun = 1;
+        }
+
+        return {
+          ...el,
+          quantity: DecQun,
+        };
+      }
+      return el;
+    });
+
+    return {
+      ...state,
+      cartPage: dec,
+    };
+  }
+  // decrement end
+
+
+  // removeCartPage start
+  if (action.type == "removeCartPage") {
+    return {
+      ...state,
+      cartPage: state.cartPage.filter((el) => el.id !== action.payload),
+      cart: state.cart.filter((el) => el.id !== action.payload),
+    };
+  }
+  // removeCartPage end
+
+
+  // search filter product start
+  if (action.type == "searchFilter") {
+    return {
+      ...state,
+      FoodBank: state.filtterFood.filter((item) =>
+        item.name.toLowerCase().includes(action.payload.toLowerCase())
+      ),
+    };
+  }
+  // search filter product end
+
+  //addBlogDetails part start
+  if (action.type == "addBlogDetails") {
+    return {
+      ...state,
+      Blog_D: state.filtterFood.filter((item) => item.id == action.payload),
+    };
+  }
+  //addBlogDetails part end
 
   return state;
 }

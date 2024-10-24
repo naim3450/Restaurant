@@ -6,8 +6,11 @@ import Video from "../Component/AboutPage/Video";
 import Chef from "../Component/Chef";
 import Review from "../Component/AboutPage/Review";
 import Articels from "../Component/Articels";
+import AddToCartPopUp from "../Component/AddToCartPopUp";
+import Context from "../Context/Context";
 
 const Home = () => {
+  const { popUp } = useContext(Context)
   return (
     <div>
       <Banner />
@@ -17,6 +20,10 @@ const Home = () => {
       <Chef />
       <Review />
       <Articels />
+
+      <AddToCartPopUp
+        className={`fixed z-50 top-0 left-0 ${!popUp ? "hidden" : "block"}`}
+      />
     </div>
   );
 };

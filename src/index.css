@@ -256,3 +256,13 @@
     height: 10px;
   }
 }
+
+.ArticlesBlog::-webkit-scrollbar {
+  width: 5px;
+  background-color: #EDEFFE;
+}
+
+.ArticlesBlog::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.282);
+  border-radius: 10px;
+}

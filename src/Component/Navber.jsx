@@ -25,8 +25,8 @@ const Navber = () => {
       path: "/menu",
     },
     {
-      name: "Pages",
-      path: "/Pages",
+      name: "Blog",
+      path: "/blog",
     },
     {
       name: "Contact",
@@ -41,7 +41,7 @@ const Navber = () => {
   }
 
   return (
-    <div className='py-4 absolute z-50 bg-[#ffffff98] top-11 left-0 w-full'>
+    <div className='py-4 absolute z-50 bg-[#ffffff98] backdrop-blur-[2px] top-11 left-0 w-full'>
       <Container className={"flex items-center justify-between"}>
         <img src={logo6} alt="" className='w-[100px] h-[80px]' />
 
