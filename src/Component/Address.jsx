@@ -231,7 +231,7 @@ const Address = () => {
                         <textarea
                             name="instruction"
                             placeholder="Add instruction for restaurant"
-                            className="placeholder:text-prh border-2 border-[#dddddd] w-full p-5 rounded-md h-[11vw]"
+                            className="placeholder:text-prh border-2 border-[#dddddd] w-full p-5 rounded-md h-[18vw]"
                         ></textarea>
                     </div>
                 </div>

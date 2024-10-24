@@ -30,7 +30,7 @@ const CheckoutForm = () => {
         alert('Order placed successfully!');
     };
 
-    const { checkOut } = useContext(Context)
+    const { checkOut, handlePlaceOrder } = useContext(Context)
 
     let Subtotal = Number((checkOut.quantity * checkOut.price).toFixed(2))
     let VAT = Number((checkOut.quantity * checkOut.price) * 0.15)
@@ -134,7 +134,7 @@ const CheckoutForm = () => {
                         </div>
                         <div className="flex justify-between font-montserrat">
                             <span>VAT ({orderSummary.VAT}%)</span>
-                            <span>${VAT}</span>
+                            <span>${VAT.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between font-montserrat">
                             <span>Delivery Fee</span>
@@ -149,6 +149,7 @@ const CheckoutForm = () => {
 
                 {/* Submit Button */}
                 <button
+                    onClick={handlePlaceOrder}
                     type="submit"
                     className="w-full bg-primary font-montserrat text-white py-3 rounded-full font-semibold bg-btn transition-all"
                 >

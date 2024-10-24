@@ -35,7 +35,7 @@ const CartDropdown = ({ className, item }) => {
 
                                 <h3 className="font-bold border-2 py-1 px-2 text-black">{quantity}</h3>
 
-                                <h3 className="block text-black font-bold mr-5">${price * quantity}</h3>
+                                <h3 className="block text-black font-bold mr-5">${(price * quantity).toFixed(2)}</h3>
                             </div>
 
                             <div className="flex items-center gap-3">

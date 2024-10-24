@@ -98,6 +98,7 @@ export const reducer = (state, action) => {
       Variation: Variation,
     };
 
+
     const match = state.cart.find((elm) => elm.id == id);
 
     if (match) {
@@ -117,18 +118,34 @@ export const reducer = (state, action) => {
         ...state,
         cart: updateQuntity,
         popUp: false,
+        toast: true,
+        toastMessage: "Your order was completed."
       };
     }
     else {
+
       return {
         ...state,
         popUp: false,
-        cart: [...state.cart, obj]
+        cart: [...state.cart, obj],
+        toast: true,
+        toastMessage: "Your order was completed."
       };
     }
+
   }
 
   // addToCart end
+
+
+  // removeToast start 
+  if (action.type == "removeToast") {
+    return {
+      ...state,
+      toast: false
+    }
+  }
+  // removeToast end 
 
   // Close start
   if (action.type == "Close") {
@@ -144,7 +161,8 @@ export const reducer = (state, action) => {
     return {
       ...state,
       cart: state.cart.filter((el) => el.id !== action.payload),
-      // heart: state.heart.filter((el) => action.payload !== el)
+      toast: true,
+      toastMessage: "Your order was removed."
     };
   }
   // removeCart end
@@ -368,6 +386,16 @@ export const reducer = (state, action) => {
     };
   }
   //addBlogDetails part end
+
+  //handlePlaceOrder part start
+  if (action.type == "handlePlaceOrder") {
+    return {
+      ...state,
+      toast: true,
+      toastMessage: "Your order was completed."
+    };
+  }
+  //handlePlaceOrder part end
 
   return state;
 }

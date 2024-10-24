@@ -8,9 +8,10 @@ import { RxCross2 } from "react-icons/rx";
 import Context from '../Context/Context'
 import Container from './Container'
 import TextCart from './TextCart'
+import Toast from './Toast'
 
 const Routlayout = () => {
-    const { ddCart, CloseCart, cart } = useContext(Context)
+    const { ddCart, CloseCart, cart, toast, toastMessage } = useContext(Context)
 
     return (
         <div>
@@ -34,6 +35,8 @@ const Routlayout = () => {
                 </div>
             </div>
 
+
+            <Toast className={`${toast ? "block" : "hidden"}`} message={toastMessage} />
             {/* 
             <div className={`w-screen fixed top-0 left-0 z-[9999] ${ddCart ? "block" : "hidden"}`}>
                 <Container className={`overflow-hidden`}>

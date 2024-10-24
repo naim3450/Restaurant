@@ -21,6 +21,7 @@ const Home = () => {
       <Review />
       <Articels />
 
+
       <AddToCartPopUp
         className={`fixed z-50 top-0 left-0 ${!popUp ? "hidden" : "block"}`}
       />

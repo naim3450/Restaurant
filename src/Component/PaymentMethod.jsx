@@ -55,7 +55,7 @@ const PaymentMethod = () => {
     let Fee = Number(1)
 
     return (
-        <Container className={'my-20 z-10 relative border-2 rounded-xl'}>
+        <Container className={'my-10 z-10 relative border-2 rounded-xl'}>
             <div className="w-full flex justify-between gap-x-40 px-10 pt-10 pb-10 bg-white shadow-2xl">
                 {/* Left side - Payment methods */}
                 <div className="w-[450px] ml-5">

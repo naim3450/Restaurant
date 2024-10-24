@@ -131,6 +131,8 @@ const inisialState = {
   checkOut: dltsProduct(),
   cartPage: CartPageLocal(),
   Blog_D: [],
+  toast: false,
+  toastMessage: "Your order was completed."
 };
 
 const ContextState = ({ children }) => {
@@ -435,6 +437,12 @@ const ContextState = ({ children }) => {
       type: "addToCart",
       payload: { id, quantity, Variation }
     });
+
+    setTimeout(() => {
+      dispatch({
+        type: "removeToast"
+      })
+    }, 2000)
   };
   // addToCart part end
 
@@ -461,6 +469,12 @@ const ContextState = ({ children }) => {
       type: "removeCart",
       payload: id,
     });
+
+    setTimeout(() => {
+      dispatch({
+        type: "removeToast"
+      })
+    }, 2000)
   };
   // removeCart part end
 
@@ -600,6 +614,19 @@ const ContextState = ({ children }) => {
   };
   // addBlogDetails end
 
+  // handlePlaceOrder start
+  const handlePlaceOrder = (id) => {
+    dispatch({
+      type: "handlePlaceOrder",
+    });
+    setTimeout(() => {
+      dispatch({
+        type: "removeToast"
+      })
+    }, 2000)
+  };
+  // handlePlaceOrder end
+
 
   return (
     <Context.Provider
@@ -621,6 +648,7 @@ const ContextState = ({ children }) => {
         removeCartPage,
         searchFilter,
         addBlogDetails,
+        handlePlaceOrder
       }}
     >
       {children}
