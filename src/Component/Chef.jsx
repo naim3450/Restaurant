@@ -4,6 +4,7 @@ import TitleDes from "../Common/TitleDes";
 import chef from "../assets/chef1.png";
 import onion from "../assets/onion.png";
 import Container from "./Container";
+import { Link } from "react-router-dom";
 
 const Chef = () => {
   return (
@@ -83,20 +84,26 @@ const Chef = () => {
             </div>
             {/* button */}
             <div className="pt-10 flex items-center gap-x-2">
-              <button
-                className={
-                  "py-3 rounded-tl-full rounded-bl-full  px-8 text-xl font-medium text-white bg-btn font-serif"
-                }
-              >
-                Book a table{" "}
-              </button>
-              <button
-                className={
-                  "py-3 rounded-tr-full rounded-br-full px-8 text-xl font-medium text-white bg-[#F66A1D] font-serif hover:bg-[#F66A1D]"
-                }
-              >
-                Menu
-              </button>
+              <Link to={'/book_table'}>
+
+                <button
+                  className={
+                    "py-3 rounded-tl-full rounded-bl-full  px-8 text-xl font-medium text-white bg-btn font-serif"
+                  }
+                >
+                  Book a table{" "}
+                </button>
+              </Link>
+
+              <Link to={'/menu'}>
+                <button
+                  className={
+                    "py-3 rounded-tr-full rounded-br-full px-8 text-xl font-medium text-white bg-[#F66A1D] font-serif hover:bg-[#F66A1D]"
+                  }
+                >
+                  Menu
+                </button>
+              </Link>
             </div>
           </div>
           {/* right */}

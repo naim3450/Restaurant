@@ -7,7 +7,9 @@ import { Link } from "react-router-dom";
 
 
 const BlogPart = () => {
+  
   const { FoodBank, addBlogDetails } = useContext(Context)
+
   return (
     <section className="py-20 mt-[6vw]">
       <Container>
@@ -20,7 +22,8 @@ const BlogPart = () => {
             need to change to create a truly happens.
           </p>
         </div>
-        <div className="mt-14 flex flex-wrap gap-5 justify-center">
+
+        <div className="mt-14 grid grid-cols-4 gap-10">
           {
             FoodBank.map((el, idx) => {
               return (

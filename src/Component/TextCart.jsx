@@ -22,7 +22,7 @@ const TextCart = ({ className, item }) => {
                 <div className="w-[100%]">
                     <div className="flex items-center justify-between px-4">
 
-                        <div className="flex items-center gap-10 py-3">
+                        <div className="flex items-center gap-5 py-3">
                             <img
                                 src={image}
                                 alt={name}
@@ -36,7 +36,7 @@ const TextCart = ({ className, item }) => {
                             <h3 className="block text-white font-bold mr-5">${price * quantity}</h3>
                         </div>
 
-                        <div className="flex items-center gap-10">
+                        <div className="flex items-center gap-5">
                             <Link to={`/singleProduct/${id}`}>
                                 <button onClick={() => handleCheck(id, quantity, Variation)} className="w-[90px] bg-black text-white p-1 font-semibold rounded-full">
                                     Checkout

@@ -61,8 +61,10 @@ const Menu = () => {
             <SpecialCard key={el.id} item={el} />
           ))}
         </div>
+      </Container>
 
-        <div className="mt-[130px] py-[120px] flex items-center justify-between bg-[#F9F9F7]">
+      <div className="mt-[130px] py-[120px] flex items-center justify-between bg-[#F9F9F7]">
+        <Container className={`flex justify-between items-center`}>
           <div className="font-serif w-[346px] text-prh2">
             <h1 className="text-[55px] font-serif font-medium leading-[60px]">
               You can order through apps
@@ -72,7 +74,6 @@ const Menu = () => {
               bibendum sed et aliquet aliquet risus tempor semper.
             </p>
           </div>
-          {/* <img src={img1} alt="" className='bg-blue-500 h-[90px] w-[100%] object-cover' /> */}
 
           <div className="grid grid-cols-3 gap-6 w-[828px]">
             {collaborate.map((img, idx) => (
@@ -84,8 +85,8 @@ const Menu = () => {
               />
             ))}
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
 
       <AddToCartPopUp
         className={`fixed z-50 top-0 left-0 ${!popUp ? "hidden" : "block"}`}

@@ -23,6 +23,7 @@ export default {
         "group": "url('/src/assets/group.png')",
         "group_bg": "url('/src/assets/Group_bg_2.png')",
         "contactBgImg": "url('/src/assets/contactbg.png)",
+        "bookTableImg": "url('/src/assets/table.jpg)",
       }
     },
   },

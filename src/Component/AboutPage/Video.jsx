@@ -8,6 +8,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Container from "../Container";
 import { ImCross } from "react-icons/im";
+import video from '../../video/video.mp4'
 
 const Video = () => {
   gsap.registerPlugin(ScrollTrigger);
@@ -89,7 +90,7 @@ const Video = () => {
         className="z-[-999] fixed rounded-lg overflow-hidden w-[80%] h-[60vh] opacity-0 top-[50%] -translate-y-[50%] left-[50%] -translate-x-[50%]"
       >
         <video ref={videoref} className="h-full w-full object-cover">
-          <source src="/src/video/video.mp4" />
+          <source src={video} />
         </video>
       </div>
       <div

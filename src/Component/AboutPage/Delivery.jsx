@@ -18,7 +18,7 @@ const Delivery = () => {
         <img src={vector} alt="" className="w-[328px] opacity-55" />
       </div>
       <Container>
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between ">
           {/* left */}
           <div>
             <img src={img} alt="" className="w-[650px]" />
@@ -34,7 +34,7 @@ const Delivery = () => {
               }
             />
             {/* Service */}
-            <div className="pt-12 flex flex-col items-start gap-y-5">
+            <div className="pt-12 flex flex-col items-start gap-y-5 ml-10">
               <div className="flex items-center gap-x-4">
                 <img src={icon1} alt="" />
                 <h5 className="font-montserrat font-bold text-base text-prh2">

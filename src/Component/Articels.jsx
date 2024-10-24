@@ -15,12 +15,12 @@ const Articels = () => {
 
         <div className="flex justify-between">
           <h3 className='text-[55px] text-prh2 font-serif leading-[60px] font-medium  w-[550px]'>Our Blog & Articles</h3>
-          <Button text={"More About Us"} className={`bg-[#C31C1E] border-btn text-white  hover:text-[#C31C1E] hover:bg-white duration-500 border-2`} />
+          <Button text={"Blog Details"} className={`bg-[#C31C1E] border-btn text-white  hover:text-[#C31C1E] hover:bg-white duration-500 border-2`} />
         </div>
 
         <div className=" mt-12 flex gap-x-10">
 
-          <div className="h-[732px] w-[636px] bg-white rounded-xl shadow-xl ">
+          <div className="h-[732px] w-[550px] bg-white rounded-xl shadow-xl ">
 
             <img src={Blog_D == false ? Burger : Blog_D[0].thums[2]} alt="blog_one.jpg" className='rounded-t-xl w-full h-[450px] object-cover' />
 
@@ -37,9 +37,9 @@ const Articels = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 gap-5 h-[732px] overflow-x-hidden overflow-auto ArticlesBlog">
+          <div className="grid grid-cols-2 gap-y-5 gap-x-10 h-[730px] ArticlesBlog">
             {
-              FoodBank.map((el, idx) => {
+              FoodBank.slice(0, 4).map((el, idx) => {
                 return (
                   <div key={idx} onClick={() => addBlogDetails(el.id)}>
                     < BlogCard

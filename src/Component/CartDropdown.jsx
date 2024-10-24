@@ -39,7 +39,7 @@ const CartDropdown = ({ className, item }) => {
                             </div>
 
                             <div className="flex items-center gap-3">
-                                <Link to={`/singleProduct/${id}`}>
+                                <Link to={`/order_food/${id}`}>
                                     <button onClick={() => handleCheck(id, quantity, Variation)} className="w-[90px] bg-black text-white p-1 font-semibold rounded-full">
                                         Checkout
                                     </button>

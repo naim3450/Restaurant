@@ -15,6 +15,9 @@ import BlogDetails from "./Component/BlogDetails";
 import AddToCartPage from "./Layout/AddToCartPage";
 import Wishlist from "./Layout/Wishlist";
 import ProductDetails from "./Component/ProductDetails";
+import BookTablePage from "./Component/BookTablePage";
+import Address from "./Component/Address";
+import OrderPage from "./Layout/OrderPage";
 
 function App() {
   const router = createBrowserRouter(
@@ -30,6 +33,8 @@ function App() {
           <Route path='/AddToCart' element={<AddToCartPage />} />
           <Route path='/wishlist' element={<Wishlist />} />
           <Route path='/singleProduct/:id' element={<ProductDetails />} />
+          <Route path='/order_food/:id' element={<OrderPage />} />
+          <Route path='/book_table' element={<BookTablePage />} />
         </Route>
       </Route>
     )

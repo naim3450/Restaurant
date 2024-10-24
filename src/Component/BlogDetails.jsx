@@ -13,7 +13,7 @@ const BlogDetails = () => {
         <Container>
           <div className='pb-20'>
             <h1 className='py-7 w-[1070px] mx-auto font-montserrat font-bold text-[46px] text-center text-prh2 leading-[60.5px]'>The secret tips & tricks to prepare a perfect burger & pizza for our customers</h1>
-            <img src={Blog_D[0].image} alt="BlogD1" className='w-[1160px] h-[600px] pb-[64px] ml-20' />
+            <img src={Blog_D[0].image} alt="BlogD1" className='w-[1160px] h-[600px] pb-[64px] ml-20 object-contain' />
             <div >
               <h2 className='pl-20 font-montserrat font-bold text-2xl pb-[20px]'>What do you need to prepare a home-made burger?</h2>
               <p className='pl-20 pr-[50px] font-montserrat text-lg pb-[36px]  leading-[28px]'>Creating the perfect burger and pizza is an art, combining ingredients, techniques, and passion to craft dishes that truly delight the palate. Today, we'll unveil some closely guarded secrets and insider tips for mastering these beloved staples of the culinary world.</p>

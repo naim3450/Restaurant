@@ -2,6 +2,7 @@ import React from 'react'
 import banner from '../assets/banner.png'
 import Container from './Container'
 import Button from './Button'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
     return (
@@ -16,8 +17,13 @@ const Banner = () => {
                     <p className='text-[20px] text-prh2 w-[530px] text-center font-montserrat font-medium'>Discover delectable cuisine and unforgettable moments in our welcoming, culinary haven.</p>
 
                     <div className="flex gap-5">
-                        <Button text={"Order Now"} className={`bg-[#C31C1E] border-btn text-white`} />
-                        <Button text={"Menu"} className={` text-white bg-black border-black !px-[52px]`} />
+                        <Link to={'/book_table'}>
+                            <Button text={"Book Table"} className={`bg-[#C31C1E] border-btn hover:border-black relative after:absolute after:top-0 after:left-0 after:content:"" after:bg-black after:h-full after:w-full overflow-hidden
+                                after:-z-10 z-10 after:scale-y-[0] after:origin-top after:transition-transform hover:after:scale-y-[1] hover:after:origin-bottom after:duration-300 text-white`} />
+                        </Link>
+                        <Link to={'/menu'}>
+                            <Button text={"Menu"} className={` text-white bg-black border-black !px-[52px]`} />
+                        </Link>
                     </div>
                 </div>
             </Container>

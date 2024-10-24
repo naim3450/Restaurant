@@ -258,11 +258,16 @@
 }
 
 .ArticlesBlog::-webkit-scrollbar {
-  width: 5px;
-  background-color: #EDEFFE;
+  display: none;
 }
 
-.ArticlesBlog::-webkit-scrollbar-thumb {
-  background: rgba(128, 128, 128, 0.282);
-  border-radius: 10px;
+.slick-initialized .slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+
+.slick-dots li.slick-active button:before {
+  color: #E5745D;
+  font-size: 8px;
 }

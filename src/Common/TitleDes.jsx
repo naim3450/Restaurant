@@ -11,7 +11,7 @@ const TitleDes = ({
   textCenter = false,
 }) => {
   return (
-    <div className={`${className} max-w-[555px] flex flex-col`}>
+    <div className={`${className} max-w-[555px]  ml-10 flex flex-col`}>
       <h3
         className={`${TitleWhite ? "text-white" : "text-prh2"} ${textCenter && "text-center"
           } font-serif text-[55px] pb-6 font-medium leading-[60px]`}

@@ -8,19 +8,24 @@ import customerImg3 from "../../assets/customer3.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import searchVector from "../../assets/searchVector.png";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import Container from "../Container";
 
 const Review = () => {
-  const pagination = {
-    clickable: true,
-    renderBullet: function (index, className) {
-      return '<span class="' + className + '">' + "" + "</span>";
-    },
+  let settings = {
+    dots: true,
+    infinite: true,
+    lazyLoad: true,
+    speed: 600,
+    slidesToShow: 3,
+    height: 1000,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    cssEase: "linear",
   };
+
   return (
     <div className="py-[100px] relative">
       <div className="absolute top-10 left-0 opacity-45">
@@ -37,241 +42,184 @@ const Review = () => {
         {/* ALL CARD */}
         <div className="pt-10">
           <div className="w-full reviewslide">
-            <Swiper
-              autoplay={{
-                delay: 1000,
-                disableOnInteraction: false,
-              }}
-              pagination={pagination}
-              spaceBetween={30}
-              slidesPerView={3}
-              clickable={true}
-              modules={[Pagination, Autoplay]}
-              className="mySwiper2"
-            >
-              <SwiperSlide>
-                {" "}
-                <div className="relative max-w-[500px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center">
-                  {/* customer img */}
-                  <div className="absolute top-[-57px] z-50">
-                    <img
-                      src={customerImg1}
-                      alt={"customerImg"}
-                      className="w-[100px]"
-                    />
-                  </div>
-                  {/* star */}
-                  <div className="flex items-center gap-x-2 text-yellow-500 text-xl">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStarHalfStroke />
-                    <FaRegStar />
-                  </div>
-                  <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
-                    Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
-                    quam sit. Vitae congue ultrices neque penatibus mi in
-                    quisque. Leo in cursus enim magnis ante. Proin iaculis
-                    platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
-                    tempus semper{" "}
-                  </p>
-                  {/* Name & designation */}
-                  <div>
-                    <h3 className="font-montserrat font-bold text-base text-prh2">
-                      Ama Ampomah
-                    </h3>
-                    <h5 className="font-montserrat font-normal text-sm text-prh">
-                      CEO & Founder Inc{" "}
-                    </h5>
-                  </div>
+
+            <Slider {...settings} className="">
+
+              <div className="relative max-w-[380px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center px-4">
+                {/* customer img */}
+                <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 z-50">
+                  <img
+                    src={customerImg1}
+                    alt={"customerImg"}
+                    className="w-[100px]"
+                  />
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <div className="relative max-w-[500px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center">
-                  {/* customer img */}
-                  <div className="absolute top-[-57px]">
-                    <img
-                      src={customerImg2}
-                      alt={"customerImg"}
-                      className="w-[100px]"
-                    />
-                  </div>
-                  {/* star */}
-                  <div className="flex items-center gap-x-2 text-yellow-500 text-xl">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div>
-                  <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
-                    Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
-                    quam sit. Vitae congue ultrices neque penatibus mi in
-                    quisque. Leo in cursus enim magnis ante. Proin iaculis
-                    platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
-                    tempus semper{" "}
-                  </p>
-                  {/* Name & designation */}
-                  <div>
-                    <h3 className="font-montserrat font-bold text-base text-prh2">
-                      Ama Ampomah
-                    </h3>
-                    <h5 className="font-montserrat font-normal text-sm text-prh">
-                      CEO & Founder Inc{" "}
-                    </h5>
-                  </div>
+                {/* star */}
+                <div className="flex items-center justify-center mt-5 gap-x-2 text-yellow-500 text-xl">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfStroke />
+                  <FaRegStar />
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <div className="relative max-w-[500px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center">
-                  {/* customer img */}
-                  <div className="absolute top-[-57px]">
-                    <img
-                      src={customerImg3}
-                      alt={"customerImg"}
-                      className="w-[100px]"
-                    />
-                  </div>
-                  {/* star */}
-                  <div className="flex items-center gap-x-2 text-yellow-500 text-xl">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div>
-                  <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
-                    Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
-                    quam sit. Vitae congue ultrices neque penatibus mi in
-                    quisque. Leo in cursus enim magnis ante. Proin iaculis
-                    platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
-                    tempus semper{" "}
-                  </p>
-                  {/* Name & designation */}
-                  <div>
-                    <h3 className="font-montserrat font-bold text-base text-prh2">
-                      Ama Ampomah
-                    </h3>
-                    <h5 className="font-montserrat font-normal text-sm text-prh">
-                      CEO & Founder Inc{" "}
-                    </h5>
-                  </div>
+                <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
+                  quam sit. Vitae congue ultrices neque penatibus mi in
+                  quisque. Leo in cursus enim magnis ante. Proin iaculis
+                  platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
+                  tempus semper{" "}
+                </p>
+                {/* Name & designation */}
+                <div>
+                  <h3 className="font-montserrat font-bold text-base text-prh2">
+                    Ama Ampomah
+                  </h3>
+                  <h5 className="font-montserrat font-normal text-sm text-prh">
+                    CEO & Founder Inc{" "}
+                  </h5>
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <div className="relative max-w-[500px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center">
-                  {/* customer img */}
-                  <div className="absolute top-[-57px]">
-                    <img
-                      src={customerImg1}
-                      alt={"customerImg"}
-                      className="w-[100px]"
-                    />
-                  </div>
-                  {/* star */}
-                  <div className="flex items-center gap-x-2 text-yellow-500 text-xl">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div>
-                  <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
-                    Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
-                    quam sit. Vitae congue ultrices neque penatibus mi in
-                    quisque. Leo in cursus enim magnis ante. Proin iaculis
-                    platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
-                    tempus semper{" "}
-                  </p>
-                  {/* Name & designation */}
-                  <div>
-                    <h3 className="font-montserrat font-bold text-base text-prh2">
-                      Ama Ampomah
-                    </h3>
-                    <h5 className="font-montserrat font-normal text-sm text-prh">
-                      CEO & Founder Inc{" "}
-                    </h5>
-                  </div>
+              </div>
+
+              <div className="relative max-w-[380px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center px-4">
+                {/* customer img */}
+                <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 z-50">
+                  <img
+                    src={customerImg1}
+                    alt={"customerImg"}
+                    className="w-[100px]"
+                  />
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <div className="relative max-w-[500px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center">
-                  {/* customer img */}
-                  <div className="absolute top-[-57px]">
-                    <img
-                      src={customerImg3}
-                      alt={"customerImg"}
-                      className="w-[100px]"
-                    />
-                  </div>
-                  {/* star */}
-                  <div className="flex items-center gap-x-2 text-yellow-500 text-xl">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div>
-                  <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
-                    Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
-                    quam sit. Vitae congue ultrices neque penatibus mi in
-                    quisque. Leo in cursus enim magnis ante. Proin iaculis
-                    platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
-                    tempus semper{" "}
-                  </p>
-                  {/* Name & designation */}
-                  <div>
-                    <h3 className="font-montserrat font-bold text-base text-prh2">
-                      Ama Ampomah
-                    </h3>
-                    <h5 className="font-montserrat font-normal text-sm text-prh">
-                      CEO & Founder Inc{" "}
-                    </h5>
-                  </div>
+                {/* star */}
+                <div className="flex items-center mt-5 gap-x-2 justify-center text-yellow-500 text-xl">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfStroke />
+                  <FaRegStar />
                 </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                {" "}
-                <div className="relative max-w-[500px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center">
-                  {/* customer img */}
-                  <div className="absolute top-[-57px]">
-                    <img
-                      src={customerImg2}
-                      alt="customerImg"
-                      className="w-[100px]"
-                    />
-                  </div>
-                  {/* star */}
-                  <div className="flex items-center gap-x-2 text-yellow-500 text-xl">
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                    <FaStar />
-                  </div>
-                  <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
-                    Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
-                    quam sit. Vitae congue ultrices neque penatibus mi in
-                    quisque. Leo in cursus enim magnis ante. Proin iaculis
-                    platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
-                    tempus semper{" "}
-                  </p>
-                  {/* Name & designation */}
-                  <div>
-                    <h3 className="font-montserrat font-bold text-base text-prh2">
-                      Ama Ampomah
-                    </h3>
-                    <h5 className="font-montserrat font-normal text-sm text-prh">
-                      CEO & Founder Inc{" "}
-                    </h5>
-                  </div>
+                <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
+                  quam sit. Vitae congue ultrices neque penatibus mi in
+                  quisque. Leo in cursus enim magnis ante. Proin iaculis
+                  platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
+                  tempus semper{" "}
+                </p>
+                {/* Name & designation */}
+                <div>
+                  <h3 className="font-montserrat font-bold text-base text-prh2">
+                    Ama Ampomah
+                  </h3>
+                  <h5 className="font-montserrat font-normal text-sm text-prh">
+                    CEO & Founder Inc{" "}
+                  </h5>
                 </div>
-              </SwiperSlide>
-            </Swiper>
+              </div>
+
+              <div className="relative max-w-[380px]  shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center px-4">
+                {/* customer img */}
+                <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 z-50">
+                  <img
+                    src={customerImg1}
+                    alt={"customerImg"}
+                    className="w-[100px]"
+                  />
+                </div>
+                {/* star */}
+                <div className="flex items-center mt-5 gap-x-2 justify-center text-yellow-500 text-xl">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfStroke />
+                  <FaRegStar />
+                </div>
+                <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
+                  quam sit. Vitae congue ultrices neque penatibus mi in
+                  quisque. Leo in cursus enim magnis ante. Proin iaculis
+                  platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
+                  tempus semper{" "}
+                </p>
+                {/* Name & designation */}
+                <div>
+                  <h3 className="font-montserrat font-bold text-base text-prh2">
+                    Ama Ampomah
+                  </h3>
+                  <h5 className="font-montserrat font-normal text-sm text-prh">
+                    CEO & Founder Inc{" "}
+                  </h5>
+                </div>
+              </div>
+
+              <div className="relative max-w-[380px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center px-4">
+                {/* customer img */}
+                <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 z-50">
+                  <img
+                    src={customerImg1}
+                    alt={"customerImg"}
+                    className="w-[100px]"
+                  />
+                </div>
+                {/* star */}
+                <div className="flex items-center mt-5 gap-x-2 justify-center text-yellow-500 text-xl">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfStroke />
+                  <FaRegStar />
+                </div>
+                <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
+                  quam sit. Vitae congue ultrices neque penatibus mi in
+                  quisque. Leo in cursus enim magnis ante. Proin iaculis
+                  platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
+                  tempus semper{" "}
+                </p>
+                {/* Name & designation */}
+                <div>
+                  <h3 className="font-montserrat font-bold text-base text-prh2">
+                    Ama Ampomah
+                  </h3>
+                  <h5 className="font-montserrat font-normal text-sm text-prh">
+                    CEO & Founder Inc{" "}
+                  </h5>
+                </div>
+              </div>
+
+              <div className="relative max-w-[380px] shadow-md rounded-tl-[40px] rounded-br-[40px] bg-white pb-10 pt-16 flex text-center flex-col items-center px-4">
+                {/* customer img */}
+                <div className="absolute top-[-40px] left-1/2 -translate-x-1/2 z-50">
+                  <img
+                    src={customerImg1}
+                    alt={"customerImg"}
+                    className="w-[100px]"
+                  />
+                </div>
+                {/* star */}
+                <div className="flex items-center mt-5 gap-x-2 justify-center text-yellow-500 text-xl">
+                  <FaStar />
+                  <FaStar />
+                  <FaStar />
+                  <FaStarHalfStroke />
+                  <FaRegStar />
+                </div>
+                <p className="pt-8 pb-5 font-montserrat font-normal text-base text-prh max-w-[380px] leading-6">
+                  Lorem ipsum dolor sit amet consectetur. Tortor massa nisl
+                  quam sit. Vitae congue ultrices neque penatibus mi in
+                  quisque. Leo in cursus enim magnis ante. Proin iaculis
+                  platea ipsum sagittis ac eu aliquam quis. Ornare tincidunt
+                  tempus semper{" "}
+                </p>
+                {/* Name & designation */}
+                <div>
+                  <h3 className="font-montserrat font-bold text-base text-prh2">
+                    Ama Ampomah
+                  </h3>
+                  <h5 className="font-montserrat font-normal text-sm text-prh">
+                    CEO & Founder Inc{" "}
+                  </h5>
+                </div>
+              </div>
+            </Slider>
           </div>
         </div>
       </Container>
