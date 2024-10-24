@@ -119,7 +119,7 @@ export const reducer = (state, action) => {
         cart: updateQuntity,
         popUp: false,
         toast: true,
-        toastMessage: "Your order was completed."
+        toastMessage: "Your order was add to cart"
       };
     }
     else {
@@ -129,7 +129,7 @@ export const reducer = (state, action) => {
         popUp: false,
         cart: [...state.cart, obj],
         toast: true,
-        toastMessage: "Your order was completed."
+        toastMessage: "Your order was add to cart"
       };
     }
 
@@ -396,6 +396,26 @@ export const reducer = (state, action) => {
     };
   }
   //handlePlaceOrder part end
+
+  //fvActiv part start
+  if (action.type == "fvDeActiv") {
+    return {
+      ...state,
+      toast: true,
+      toastMessage: "Add To Wishlist"
+    };
+  }
+  //fvActiv part end
+
+  //fvActiv part start
+  if (action.type == "fvActiv") {
+    return {
+      ...state,
+      toast: true,
+      toastMessage: "Remove To Wishlist"
+    };
+  }
+  //fvActiv part end
 
   return state;
 }

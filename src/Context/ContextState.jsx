@@ -132,7 +132,7 @@ const inisialState = {
   cartPage: CartPageLocal(),
   Blog_D: [],
   toast: false,
-  toastMessage: "Your order was completed."
+  toastMessage: "order was add to cart"
 };
 
 const ContextState = ({ children }) => {
@@ -627,6 +627,34 @@ const ContextState = ({ children }) => {
   };
   // handlePlaceOrder end
 
+  // fvActiv start
+  const fvDeActiv = (id) => {
+    dispatch({
+      type: "fvDeActiv",
+    });
+
+    setTimeout(() => {
+      dispatch({
+        type: "removeToast"
+      })
+    }, 2000)
+  };
+  // fvDeActiv end
+
+  // fvActiv start
+  const fvActiv = (id) => {
+    dispatch({
+      type: "fvActiv",
+    });
+
+    setTimeout(() => {
+      dispatch({
+        type: "removeToast"
+      })
+    }, 2000)
+  };
+  // fvActiv end
+
 
   return (
     <Context.Provider
@@ -648,7 +676,9 @@ const ContextState = ({ children }) => {
         removeCartPage,
         searchFilter,
         addBlogDetails,
-        handlePlaceOrder
+        handlePlaceOrder,
+        fvDeActiv,
+        fvActiv
       }}
     >
       {children}

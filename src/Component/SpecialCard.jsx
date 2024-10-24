@@ -5,7 +5,7 @@ import Context from "../Context/Context";
 import { FaHeart } from "react-icons/fa6";
 
 const SpecialCard = ({ item, heart = true }) => {
-  const { AddcartPopUp, addToWish, love } = useContext(Context);
+  const { AddcartPopUp, addToWish, love, fvDeActiv, fvActiv } = useContext(Context);
   const { id, image, name, description, price } = item;
 
   const HandleFavour = (id) => {
@@ -26,7 +26,7 @@ const SpecialCard = ({ item, heart = true }) => {
             onClick={() => HandleFavour(id)}
             className="absolute top-9 cursor-pointer right-[55px] overflow-hidden z-50 text-red-600 text-[22px] bg-white rounded-full size-[40px] flex items-center justify-center"
           >
-            {love.includes(id) ? <FaHeart /> : <CiHeart />}
+            {love.includes(id) ? <FaHeart onClick={fvActiv} /> : <CiHeart onClick={fvDeActiv} />}
           </div>
         )}
       </div>
