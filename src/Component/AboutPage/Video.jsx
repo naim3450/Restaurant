@@ -95,7 +95,7 @@ const Video = () => {
       </div>
       <div
         id="video"
-        className={`relative bg-[url('./src/assets/videoBg.png')] w-full h-[690px] object-cover bg-center 
+        className={`relative bg-[url('public/videoBg.png')] w-full h-[690px] object-cover bg-center 
            
         `}
       >
