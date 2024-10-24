@@ -1,7 +1,6 @@
 import { useContext, useState } from "react";
 import { IoIosSearch } from "react-icons/io";
 import Context from "../Context/Context";
-// import List from "./List";
 
 const SearchBar = () => {
     const [searchTerm, setSearchTerm] = useState("");

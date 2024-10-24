@@ -1,12 +1,12 @@
 import React from "react";
 import Container from "./Container";
 import BlogCard from "./BlogCard";
-import Blog_one from '../assets/blog_one.jpg'
 import { useContext } from "react";
 import Context from "../Context/Context";
 import { Link } from "react-router-dom";
-const BlogPart = () => {
 
+
+const BlogPart = () => {
   const { FoodBank, addBlogDetails } = useContext(Context)
   return (
     <section className="py-20 mt-[6vw]">

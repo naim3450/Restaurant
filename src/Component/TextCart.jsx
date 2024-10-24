@@ -1,5 +1,4 @@
 import React, { useContext } from 'react';
-import Container from './Container';
 import { RxCross2 } from "react-icons/rx";
 import Context from '../Context/Context';
 import { Link } from 'react-router-dom';

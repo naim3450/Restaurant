@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import Container from './Container'
-import BlogD1 from '../assets/blogD1.jpg'
 import BlogD2 from '../assets/blogD2.jpg'
 import Context from '../Context/Context'
 

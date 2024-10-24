@@ -1,5 +1,4 @@
 import React, { useContext, useState } from "react";
-import Burger from "../assets/burger.jpg";
 import Container from "./Container";
 import Button from "./Button";
 import { FaStar } from "react-icons/fa";
@@ -45,10 +44,6 @@ const ProductDetails = () => {
                                     )
                                 })
                             }
-                            {/* <img onClick={() => setactivImg(Burger)} src={Burger} alt="" className="rounded-lg h-[100px] w-[150px]" />
-                            <img onClick={() => setactivImg(Burger)} src={Burger} alt="" className="rounded-lg h-[100px] w-[150px]" />
-                            <img onClick={() => setactivImg(Burger)} src={Burger} alt="" className="rounded-lg h-[100px] w-[150px]" /> */}
-
                         </div>
                     </div>
                     <div className="">
